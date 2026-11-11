@@ -24,6 +24,7 @@
    21. Reduced Motion
    22. Home Hero (text banner)
    23. Banner Slider: laptop / mobile image fix
+   24. Mobile: hide moving hero logo
    ============================================================ */
 
 /* ============ 1. FONTS & ROOT VARIABLES ============ */
@@ -420,4 +421,10 @@ section.bn{padding:0}
 /* mobile pe mob.png (HTML <picture> ke 700px breakpoint se match) */
 @media(max-width:700px){
   .bn-slide{--bg:url("imgsld/mob.png")}
+}
+
+/* ============ 24. MOBILE: HIDE MOVING HERO LOGO ============ */
+/* laptop view me logo waise hi rahega, sirf mobile/tablet (820px ya chhota) pe hatega */
+@media(max-width:820px){
+  .hero-logo-wrap{display:none}
 }
