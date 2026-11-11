@@ -24,6 +24,7 @@
    21. Reduced Motion
    22. Home Hero (text banner)
    23. Banner Slider: laptop / mobile image fix
+   24. Clinic Slider (day, time, location)
    ============================================================ */
 
 /* ============ 1. FONTS & ROOT VARIABLES ============ */
@@ -421,3 +422,34 @@ section.bn{padding:0}
 @media(max-width:700px){
   .bn-slide{--bg:url("imgsld/mob.png")}
 }
+
+/* ============ 24. CLINIC SLIDER (DAY, TIME, LOCATION) ============ */
+.cs-box{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 10px 30px rgba(30,77,43,.16);background:#fff}
+.cs-track{display:flex;transition:transform .6s cubic-bezier(.65,0,.35,1)}
+.cs-slide{flex:0 0 100%;min-width:100%;display:grid;grid-template-columns:.8fr 1.6fr}
+.cs-head{color:#fff;text-align:center;padding:34px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;font-family:var(--serif);font-weight:700}
+.cs-ico{font-size:2.6rem;line-height:1}
+.cs-head h3{font-size:2rem;line-height:1.25}
+.cs-en{font-size:.9rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.cs-body{padding:30px 56px 44px;display:flex;flex-direction:column;gap:12px}
+.cs-body h4{font-family:var(--serif);font-weight:700;color:var(--forest);font-size:1.5rem;line-height:1.35}
+.cs-addr{color:#3d4f3f}
+.cs-time{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;background:var(--mist);border-left:4px solid var(--leaf);border-radius:10px;padding:10px 14px}
+.cs-time b{color:var(--forest)}
+.cs-time span{font-weight:600;color:#2a3d2c}
+.cs-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.cs-actions .btn{flex:1 1 150px;text-align:center;padding:11px 14px;font-size:.95rem}
+.cs-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;border:2px solid rgba(30,77,43,.4);background:rgba(255,255,255,.9);color:var(--forest);font-size:1.7rem;line-height:1;cursor:pointer;padding-bottom:4px}
+.cs-btn:hover{background:var(--mist)}
+.cs-btn.prev{left:10px}.cs-btn.next{right:10px}
+.cs-dots{display:flex;justify-content:center;gap:10px;margin-top:16px}
+.cs-dots button{width:12px;height:12px;border-radius:50%;border:2px solid var(--forest);background:transparent;cursor:pointer;padding:0}
+.cs-dots button[aria-current="true"]{background:var(--turmeric);border-color:var(--turmeric)}
+@media(max-width:760px){
+  .cs-slide{grid-template-columns:1fr}
+  .cs-head{padding:20px 16px}
+  .cs-head h3{font-size:1.5rem}
+  .cs-body{padding:20px 18px 24px}
+  .cs-btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){.cs-track{transition:none}}
