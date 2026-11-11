@@ -74,7 +74,7 @@ const SLIDES=[
 (function(){
   const box=document.querySelector(".bn");if(!box)return;
   const track=box.querySelector(".bn-track"),dotsEl=box.querySelector(".bn-dots");
-  track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}"><picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}"${i?' loading="lazy"':''}></picture></div>`).join("");
+  track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}"><picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}" decoding="async"></picture></div>`).join("");
 
   // side space colours: picture ke left aur right edge ka colour copy karo
   function edges(img,slide){
