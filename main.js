@@ -63,40 +63,20 @@ if(enq)enq.addEventListener("submit",e=>{
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t),"_blank","noopener");
 });
 
-// ---- Home banner slider: pehle image slide, uske baad clinic details ki slides ----
-// IMAGE SLIDE: d = laptop image, m = mobile image (imgsld/ folder). Nayi image add karni ho to ek line copy karo.
+// ---- Home banner slider (images imgsld/ folder me hain) ----
+// d = laptop image, m = mobile image (same file bhi chalegi). Nayi image add karni ho to ek line copy karo.
 const SLIDES=[
-  {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"}
-  // ,{d:"imgsld/slide2-lptp.png",m:"imgsld/slide2-mob.png",alt:"Describe slide 2"}
-];
-// CLINIC SLIDES: har clinic ke liye ek line. "XX" wali details apni asli details se badlo.
-// cls = background colour: day-mon (neela) | day-thu (hara) | day-sat (baingani)
-// map = Google Maps me search hone wala text (jitna sahi pata, utna sahi location)
-const CLINICS=[
-  {cls:"day-mon",day:"दिन लिखें (जैसे सोमवार)",place:"Gopalganj, Bihar",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Rishi Ratna Ayurved Gopalganj Bihar"},
-  {cls:"day-thu",day:"दिन लिखें (जैसे गुरुवार)",place:"Tamkuhi Raj, Uttar Pradesh",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Tamkuhi Raj Uttar Pradesh"},
-  {cls:"day-sat",day:"दिन लिखें (जैसे शनिवार)",place:"Kasya, Kushinagar, Uttar Pradesh",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Kasia Kushinagar Uttar Pradesh"}
+  {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"},
+  {d:"imgsld/risho.jpeg",m:"imgsld/risho.jpeg",alt:"Risho-Liv Syrup"},
+  {d:"imgsld/ortho.jpeg",m:"imgsld/ortho.jpeg",alt:"Ortho Rish Syrup"},
+  {d:"imgsld/femo.jpeg",m:"imgsld/femo.jpeg",alt:"Femorish Syrup"}
 ];
 (function(){
   const box=document.querySelector(".bn");if(!box)return;
   const track=box.querySelector(".bn-track"),dotsEl=box.querySelector(".bn-dots");
-  const total=SLIDES.length+CLINICS.length;
-  const imgHtml=SLIDES.map((s,i)=>`<div class="bn-slide bn-img" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${total}"><picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}"${i?' loading="lazy"':''}></picture></div>`).join("");
-  const clinicHtml=CLINICS.map((c,k)=>{
-    const wa=encodeURIComponent("Hello, I would like to know about the clinic at "+c.place+" ("+c.day+").");
-    const mp="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(c.map);
-    return `<div class="bn-slide bn-clinic ${esc(c.cls)}" role="group" aria-roledescription="slide" aria-label="${SLIDES.length+k+1} of ${total}"><div class="bc-in">
-      <span class="bc-tag">Our Clinic</span>
-      <h3 class="bc-day">${esc(c.day)}</h3>
-      <p class="bc-place">${esc(c.place)}</p>
-      <p class="bc-addr">${esc(c.addr)}</p>
-      <p class="bc-time"><span>समय / Time:</span><span>${esc(c.time)}</span></p>
-      <div class="bc-btns"><a class="btn gold" href="${mp}" target="_blank" rel="noopener">Open in Maps</a><a class="btn line" href="https://wa.me/${WA}?text=${wa}" target="_blank" rel="noopener">WhatsApp</a></div>
-    </div></div>`;
-  }).join("");
-  track.innerHTML=imgHtml+clinicHtml;
+  track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}"><picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}"${i?' loading="lazy"':''}></picture></div>`).join("");
 
-  // side space colours: image slides ke left/right edge ka colour copy karo
+  // side space colours: picture ke left aur right edge ka colour copy karo
   function edges(img,slide){
     try{
       const c=document.createElement("canvas");c.width=40;c.height=12;
@@ -106,13 +86,13 @@ const CLINICS=[
       slide.style.setProperty("--gl",col(0));slide.style.setProperty("--gr",col(39));slide.classList.add("ed");
     }catch(e){/* keeps the blurred fallback */}
   }
-  track.querySelectorAll(".bn-img").forEach(sl=>{
+  [...track.children].forEach(sl=>{
     const im=sl.querySelector("img"),run=()=>edges(im,sl);
     im.complete&&im.naturalWidth?run():im.addEventListener("load",run);
   });
 
-  if(total<2){box.classList.add("one");return}
-  dotsEl.innerHTML=Array.from({length:total},(_,i)=>`<button type="button" aria-label="Go to slide ${i+1}"></button>`).join("");
+  if(SLIDES.length<2){box.classList.add("one");return}
+  dotsEl.innerHTML=SLIDES.map((s,i)=>`<button type="button" aria-label="Go to slide ${i+1}"></button>`).join("");
   const slides=[...track.children],dots=[...dotsEl.children];let i=0,timer=null,x0=null;
   function go(k){i=(k+slides.length)%slides.length;track.style.transform="translateX(-"+(i*100)+"%)";
     slides.forEach((s,j)=>{s.inert=j!==i;s.setAttribute("aria-hidden",j!==i)});dots.forEach((d,j)=>d.setAttribute("aria-current",j===i))}
