@@ -67,9 +67,9 @@ if(enq)enq.addEventListener("submit",e=>{
 // d = laptop image, m = mobile image (same file bhi chalegi). Nayi image add karni ho to ek line copy karo.
 const SLIDES=[
   {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"},
-  {d:"imgsld/risho.jpeg",m:"imgsld/risho.jpeg",alt:"Risho-Liv Syrup"},
-  {d:"imgsld/ortho.jpeg",m:"imgsld/ortho.jpeg",alt:"Ortho Rish Syrup"},
-  {d:"imgsld/femo.jpeg",m:"imgsld/femo.jpeg",alt:"Femorish Syrup"}
+  {d:"imgsld/risho.jpeg",m:"imgsld/rishomob.png",alt:"Risho-Liv Syrup"},
+  {d:"imgsld/ortho.jpeg",m:"imgsld/orthomob.png",alt:"Ortho Rish Syrup"},
+  {d:"imgsld/femo.jpeg",m:"imgsld/femomob.png",alt:"Femorish Syrup"}
 ];
 (function(){
   const box=document.querySelector(".bn");if(!box)return;
