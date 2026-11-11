@@ -22,6 +22,8 @@
    19. Hamburger Menu
    20. Responsive
    21. Reduced Motion
+   22. Home Hero (text banner)
+   23. Banner Slider: laptop / mobile image fix
    ============================================================ */
 
 /* ============ 1. FONTS & ROOT VARIABLES ============ */
@@ -409,3 +411,13 @@ footer .links a:hover{text-decoration:underline}
   .hero-facts{grid-template-columns:repeat(2,1fr);margin-top:32px}
 }
 @media(max-width:600px){.hero.home{padding-top:44px}}
+
+/* ============ 23. BANNER SLIDER: LAPTOP / MOBILE IMAGE FIX ============ */
+/* banner section pe extra padding nahi chahiye (section{padding:64px 0} override) */
+section.bn{padding:0}
+/* blurred side-background: laptop pe lptp.png */
+.bn-slide{--bg:url("imgsld/lptp.png")}
+/* mobile pe mob.png (HTML <picture> ke 700px breakpoint se match) */
+@media(max-width:700px){
+  .bn-slide{--bg:url("imgsld/mob.png")}
+}
