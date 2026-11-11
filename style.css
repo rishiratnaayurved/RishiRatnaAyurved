@@ -24,7 +24,7 @@
    21. Reduced Motion
    22. Home Hero (text banner)
    23. Banner Slider: laptop / mobile image fix
-   24. Clinic Slider (day, time, location)
+   24. Banner Slider: clinic detail slides
    ============================================================ */
 
 /* ============ 1. FONTS & ROOT VARIABLES ============ */
@@ -423,33 +423,20 @@ section.bn{padding:0}
   .bn-slide{--bg:url("imgsld/mob.png")}
 }
 
-/* ============ 24. CLINIC SLIDER (DAY, TIME, LOCATION) ============ */
-.cs-box{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 10px 30px rgba(30,77,43,.16);background:#fff}
-.cs-track{display:flex;transition:transform .6s cubic-bezier(.65,0,.35,1)}
-.cs-slide{flex:0 0 100%;min-width:100%;display:grid;grid-template-columns:.8fr 1.6fr}
-.cs-head{color:#fff;text-align:center;padding:34px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;font-family:var(--serif);font-weight:700}
-.cs-ico{font-size:2.6rem;line-height:1}
-.cs-head h3{font-size:2rem;line-height:1.25}
-.cs-en{font-size:.9rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
-.cs-body{padding:30px 56px 44px;display:flex;flex-direction:column;gap:12px}
-.cs-body h4{font-family:var(--serif);font-weight:700;color:var(--forest);font-size:1.5rem;line-height:1.35}
-.cs-addr{color:#3d4f3f}
-.cs-time{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;background:var(--mist);border-left:4px solid var(--leaf);border-radius:10px;padding:10px 14px}
-.cs-time b{color:var(--forest)}
-.cs-time span{font-weight:600;color:#2a3d2c}
-.cs-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.cs-actions .btn{flex:1 1 150px;text-align:center;padding:11px 14px;font-size:.95rem}
-.cs-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;border:2px solid rgba(30,77,43,.4);background:rgba(255,255,255,.9);color:var(--forest);font-size:1.7rem;line-height:1;cursor:pointer;padding-bottom:4px}
-.cs-btn:hover{background:var(--mist)}
-.cs-btn.prev{left:10px}.cs-btn.next{right:10px}
-.cs-dots{display:flex;justify-content:center;gap:10px;margin-top:16px}
-.cs-dots button{width:12px;height:12px;border-radius:50%;border:2px solid var(--forest);background:transparent;cursor:pointer;padding:0}
-.cs-dots button[aria-current="true"]{background:var(--turmeric);border-color:var(--turmeric)}
-@media(max-width:760px){
-  .cs-slide{grid-template-columns:1fr}
-  .cs-head{padding:20px 16px}
-  .cs-head h3{font-size:1.5rem}
-  .cs-body{padding:20px 18px 24px}
-  .cs-btn{display:none}
+/* ============ 24. BANNER SLIDER: CLINIC DETAIL SLIDES ============ */
+/* image slide ke baad aane wali clinic slides (din, samay, location) */
+.bn-slide.bn-clinic{color:#fff;text-align:center}
+.bn-slide.bn-clinic::before{display:none}
+.bc-in{position:relative;z-index:1;width:min(860px,86%);padding:40px 0 60px;display:grid;gap:10px;justify-items:center}
+.bc-tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 16px;font-weight:700;font-size:.95rem;letter-spacing:.04em}
+.bc-day{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.bc-place{font-family:var(--serif);font-weight:700;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.35;color:#ffe9a8}
+.bc-addr{font-size:1.08rem;color:#f1f8e8;max-width:54ch}
+.bc-time{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:8px 20px;font-weight:700;font-size:1.1rem}
+.bc-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+@media(max-width:700px){
+  .bc-in{width:90%;padding:26px 0 48px;gap:8px}
+  .bc-addr{font-size:1rem}
+  .bc-time{font-size:1rem;padding:8px 14px}
+  .bc-btns .btn{padding:11px 18px;font-size:.95rem}
 }
-@media (prefers-reduced-motion:reduce){.cs-track{transition:none}}
