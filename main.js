@@ -64,10 +64,10 @@ if(enq)enq.addEventListener("submit",e=>{
 });
 
 // Home banner slider (images are in the imgsld/ folder)
-// d = laptop image, m = mobile image (the same file is fine). To add a slide, copy one line.
+// d = laptop image, m = mobile image. To add a slide, copy one line.
 const SLIDES=[
-  {d:"imgsld/slide.png",m:"imgsld/slide.png",alt:"Rishi Ratna Ayurved banner"}
-  // ,{d:"imgsld/slide2.png",m:"imgsld/slide2.png",alt:"Describe slide 2"}
+  {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"}
+  // ,{d:"imgsld/slide2-lptp.png",m:"imgsld/slide2-mob.png",alt:"Describe slide 2"}
 ];
 (function(){
   const box=document.querySelector(".bn");if(!box)return;
@@ -102,6 +102,50 @@ const SLIDES=[
   box.addEventListener("mouseenter",stop);box.addEventListener("mouseleave",play);
   box.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
   box.addEventListener("touchend",e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50){go(d<0?i+1:i-1);play()}x0=null});
+  go(0);play();
+})();
+
+// ---- Clinic slider (home page): din, samay aur location ----
+// Har clinic ke liye ek line. Neeche ki saari "XX" wali details apni asli details se badlo.
+// cls = header ka colour: day-mon (neela) | day-thu (hara) | day-sat (baingani)
+// map = Google Maps me search hone wala text (jitna sahi pata, utna sahi location)
+const CLINICS=[
+  {cls:"day-mon",icon:"\u{1F4CD}",day:"दिन लिखें (जैसे सोमवार)",en:"Day",place:"Gopalganj, Bihar",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Rishi Ratna Ayurved Gopalganj Bihar"},
+  {cls:"day-thu",icon:"\u{1F4CD}",day:"दिन लिखें (जैसे गुरुवार)",en:"Day",place:"Tamkuhi Raj, Uttar Pradesh",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Tamkuhi Raj Uttar Pradesh"},
+  {cls:"day-sat",icon:"\u{1F4CD}",day:"दिन लिखें (जैसे शनिवार)",en:"Day",place:"Kasya, Kushinagar, Uttar Pradesh",addr:"पूरा पता यहाँ लिखें (XX)",time:"XX:XX AM – XX:XX PM",map:"Kasia Kushinagar Uttar Pradesh"}
+];
+(function(){
+  const box=document.querySelector(".cs");if(!box)return;
+  const track=box.querySelector(".cs-track"),dotsEl=box.querySelector(".cs-dots");
+  track.innerHTML=CLINICS.map((c,i)=>{
+    const wa=encodeURIComponent("Hello, I would like to know about the clinic at "+c.place+" ("+c.day+").");
+    const mp="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(c.map);
+    return `<div class="cs-slide" role="group" aria-roledescription="slide" aria-label="${i+1} of ${CLINICS.length}">
+      <div class="cs-head ${esc(c.cls)}"><span class="cs-ico" aria-hidden="true">${c.icon}</span><h3>${esc(c.day)}</h3><span class="cs-en">${esc(c.en)}</span></div>
+      <div class="cs-body">
+        <h4>${esc(c.place)}</h4>
+        <p class="cs-addr">${esc(c.addr)}</p>
+        <div class="cs-time"><b>समय / Time</b><span>${esc(c.time)}</span></div>
+        <div class="cs-actions">
+          <a class="btn green" href="${mp}" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn wa" href="https://wa.me/${WA}?text=${wa}" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div></div>`;
+  }).join("");
+  if(CLINICS.length<2){box.querySelectorAll(".cs-btn").forEach(b=>b.style.display="none");return}
+  dotsEl.innerHTML=CLINICS.map((c,i)=>`<button type="button" aria-label="Go to clinic ${i+1}"></button>`).join("");
+  const slides=[...track.children],dots=[...dotsEl.children],area=box.querySelector(".cs-box");
+  let i=0,timer=null,x0=null;
+  function go(k){i=(k+slides.length)%slides.length;track.style.transform="translateX(-"+(i*100)+"%)";
+    slides.forEach((s,j)=>{s.inert=j!==i;s.setAttribute("aria-hidden",j!==i)});dots.forEach((d,j)=>d.setAttribute("aria-current",j===i))}
+  function stop(){clearInterval(timer)}
+  function play(){stop();if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;timer=setInterval(()=>go(i+1),6500)}
+  box.querySelector(".prev").onclick=()=>{go(i-1);play()};
+  box.querySelector(".next").onclick=()=>{go(i+1);play()};
+  dots.forEach((d,j)=>d.onclick=()=>{go(j);play()});
+  area.addEventListener("mouseenter",stop);area.addEventListener("mouseleave",play);
+  area.addEventListener("touchstart",e=>{x0=e.touches[0].clientX;stop()},{passive:true});
+  area.addEventListener("touchend",e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(d<0?i+1:i-1);x0=null;play()});
   go(0);play();
 })();
 
