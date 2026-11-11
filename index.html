@@ -98,19 +98,16 @@
 <main>
 
   <!-- HOME BANNER SLIDER -->
-  <!-- Laptop: imgsld/lptp.png | Mobile (700px or smaller): imgsld/mob.png -->
-  <!-- Aur images add karni ho to "one" class hata do aur .bn-track me naya .bn-slide add karo -->
-  <section class="bn one" aria-roledescription="carousel" aria-label="Rishi Ratna Ayurved banner">
+  <!-- Slide 1 = image (laptop: imgsld/lptp.png, mobile: imgsld/mob.png) -->
+  <!-- Uske baad clinic details ki slides. Sab main.js (SLIDES aur CLINICS) se banti hain -->
+  <section class="bn" aria-roledescription="carousel" aria-label="Rishi Ratna Ayurved banner and clinics">
     <h2 class="sr">Rishi Ratna Ayurved</h2>
 
-    <div class="bn-track">
-      <div class="bn-slide">
-        <picture>
-          <source media="(max-width: 700px)" srcset="imgsld/mob.png">
-          <img src="imgsld/lptp.png" alt="Rishi Ratna Ayurved" fetchpriority="high">
-        </picture>
-      </div>
-    </div>
+    <div class="bn-track"></div>
+
+    <button class="bn-btn prev" type="button" aria-label="Previous slide">&#8249;</button>
+    <button class="bn-btn next" type="button" aria-label="Next slide">&#8250;</button>
+    <div class="bn-dots"></div>
   </section>
 
   <!-- HOME HERO -->
@@ -168,22 +165,6 @@
       <li><b>WhatsApp</b><span>Quick answers</span></li>
     </ul>
 
-  </section>
-
-
-  <!-- CLINIC SLIDER (data main.js ki CLINICS list se aata hai) -->
-  <section class="cs" aria-roledescription="carousel" aria-label="Clinic details">
-    <div class="wrap">
-      <h2>Our Clinics</h2>
-      <p class="sub">Clinic ka din, samay aur location yahan dekhein.</p>
-
-      <div class="cs-box">
-        <div class="cs-track"></div>
-        <button class="cs-btn prev" type="button" aria-label="Previous clinic">&#8249;</button>
-        <button class="cs-btn next" type="button" aria-label="Next clinic">&#8250;</button>
-      </div>
-      <div class="cs-dots"></div>
-    </div>
   </section>
 
 
