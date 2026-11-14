@@ -1,31 +1,35 @@
 // ---- Products ----
 // cat is "syrup" or "churan". To add a product, copy one line below and change its values.
-// Images are in the imgdet/ folder. Optional: add price:"Rs 000" to show a price on the card.
+// slug = product page ka naam (product/<slug>.html). Images are in the imgdet/ folder. Optional: add price:"Rs 000" to show a price on the card.
 const products=[
-  {"cat": "syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects and supports the liver (liver protective)", "Helps improve digestion", "Boosts appetite and helps reduce weakness", "Herbal formula, 100% natural"]},
-  {"cat": "syrup", "name": "Risho Liv Ds Syrup", "img": "imgdet/rishods.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects the liver and helps maintain healthy liver function", "Improves digestion and boosts natural appetite", "Supports in fatty liver and weakness, aids overall strength", "Sugar free, 100% natural Ayurvedic formulation"]},
-  {"cat": "syrup", "name": "Abhayristha Syrup", "img": "imgdet/abhay.jpeg", "type": "Ayurvedic syrup", "pack": "200 ml", "points": ["Helpful in constipation and piles", "Helps dry up piles (lumps) and reduce pain", "Supportive in stomach disorders and ulcers", "100% sugar free Ayurvedic, natural herbal formula"]},
-  {"cat": "syrup", "name": "Stono Rish Syrup", "img": "imgdet/stono.jpeg", "type": "Ayurvedic stone syrup", "pack": "200 ml", "points": ["Helpful in dissolving kidney stones", "Relieves pain and burning sensation", "Supports healthy, free urine flow", "Sugar free Ayurvedic, natural formula"]},
-  {"cat": "syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Ayurvedic joint pain syrup", "pack": "200 ml", "points": ["Relief from joint pain and swelling", "Helpful for arthritis and lower back pain", "Beneficial for muscle stiffness and tightness", "100% sugar free, natural Ayurvedic care"]},
-  {"cat": "syrup", "name": "Blood Purrish Syrup", "img": "imgdet/blood.jpeg", "type": "Ayurvedic blood purifier syrup", "pack": "200 ml", "points": ["Natural blood purifier that helps remove toxins and impurities from the blood", "Helps reduce pimples, acne and boils, and promotes clear, healthy skin", "Beneficial in itching, skin disorders and allergies, and soothes skin irritation", "Sugar free, made with 100% natural Ayurvedic herbs"]},
-  {"cat": "syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Restorative and haematinic syrup", "pack": "", "points": ["Helpful in anemia (low blood): restorative and haematinic action", "Helps remove weakness and fatigue", "Helps with loss of appetite", "Fortified with natural vitamins and minerals, made with natural fruits and herbs"]},
-  {"cat": "syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Haematinic feminine syrup with Ashoka", "pack": "200 ml", "points": ["Special health tonic for women", "With Ashoka: supports uterine health", "Helps in anemia and weakness", "Ayurvedic, herbal and 100% natural"]},
-  {"cat": "syrup", "name": "Cofrish Expectorant", "img": "imgdet/cof.jpeg", "type": "Herbal expectorant syrup", "pack": "100 ml", "points": ["Relief from cough and cold", "Relieves sore throat and irritation", "Expectorant: helps expel phlegm", "Eases breathing. Anti-allergic, decongestant, herbal formula"]},
-  {"cat": "syrup", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Aloe vera swaras (juice)", "pack": "200 ml", "points": ["Helps manage diabetes and blood sugar levels", "Relieves constipation and improves digestion", "Beneficial in blood disorders and high blood pressure", "Energy drink for all age groups: no added water, sugar free, 100% natural"]},
-  {"cat": "syrup", "name": "Zonyl Herbal Mixture", "img": "imgdet/zonyl.jpeg", "type": "Ayurvedic herbal mixture", "pack": "", "points": ["Relief in sciatic pain (pain from the lower back down to the leg)", "Helpful in joint and muscle pain", "Herbal mixture, 100% natural", "Makes walking and moving around easier"]}
+  {"cat": "syrup", "slug": "risho-liv-syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects and supports the liver (liver protective)", "Helps improve digestion", "Boosts appetite and helps reduce weakness", "Herbal formula, 100% natural"]},
+  {"cat": "syrup", "slug": "risho-liv-ds-syrup", "name": "Risho Liv Ds Syrup", "img": "imgdet/rishods.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects the liver and helps maintain healthy liver function", "Improves digestion and boosts natural appetite", "Supports in fatty liver and weakness, aids overall strength", "Sugar free, 100% natural Ayurvedic formulation"]},
+  {"cat": "syrup", "slug": "abhayristha-syrup", "name": "Abhayristha Syrup", "img": "imgdet/abhay.jpeg", "type": "Ayurvedic syrup", "pack": "200 ml", "points": ["Helpful in constipation and piles", "Helps dry up piles (lumps) and reduce pain", "Supportive in stomach disorders and ulcers", "100% sugar free Ayurvedic, natural herbal formula"]},
+  {"cat": "syrup", "slug": "stono-rish-syrup", "name": "Stono Rish Syrup", "img": "imgdet/stono.jpeg", "type": "Ayurvedic stone syrup", "pack": "200 ml", "points": ["Helpful in dissolving kidney stones", "Relieves pain and burning sensation", "Supports healthy, free urine flow", "Sugar free Ayurvedic, natural formula"]},
+  {"cat": "syrup", "slug": "ortho-rish-syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Ayurvedic joint pain syrup", "pack": "200 ml", "points": ["Relief from joint pain and swelling", "Helpful for arthritis and lower back pain", "Beneficial for muscle stiffness and tightness", "100% sugar free, natural Ayurvedic care"]},
+  {"cat": "syrup", "slug": "blood-purrish-syrup", "name": "Blood Purrish Syrup", "img": "imgdet/blood.jpeg", "type": "Ayurvedic blood purifier syrup", "pack": "200 ml", "points": ["Natural blood purifier that helps remove toxins and impurities from the blood", "Helps reduce pimples, acne and boils, and promotes clear, healthy skin", "Beneficial in itching, skin disorders and allergies, and soothes skin irritation", "Sugar free, made with 100% natural Ayurvedic herbs"]},
+  {"cat": "syrup", "slug": "hemorish-syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Restorative and haematinic syrup", "pack": "", "points": ["Helpful in anemia (low blood): restorative and haematinic action", "Helps remove weakness and fatigue", "Helps with loss of appetite", "Fortified with natural vitamins and minerals, made with natural fruits and herbs"]},
+  {"cat": "syrup", "slug": "femorish-syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Haematinic feminine syrup with Ashoka", "pack": "200 ml", "points": ["Special health tonic for women", "With Ashoka: supports uterine health", "Helps in anemia and weakness", "Ayurvedic, herbal and 100% natural"]},
+  {"cat": "syrup", "slug": "cofrish-expectorant", "name": "Cofrish Expectorant", "img": "imgdet/cof.jpeg", "type": "Herbal expectorant syrup", "pack": "100 ml", "points": ["Relief from cough and cold", "Relieves sore throat and irritation", "Expectorant: helps expel phlegm", "Eases breathing. Anti-allergic, decongestant, herbal formula"]},
+  {"cat": "syrup", "slug": "aloevera-swaras", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Aloe vera swaras (juice)", "pack": "200 ml", "points": ["Helps manage diabetes and blood sugar levels", "Relieves constipation and improves digestion", "Beneficial in blood disorders and high blood pressure", "Energy drink for all age groups: no added water, sugar free, 100% natural"]},
+  {"cat": "syrup", "slug": "zonyl-herbal-mixture", "name": "Zonyl Herbal Mixture", "img": "imgdet/zonyl.jpeg", "type": "Ayurvedic herbal mixture", "pack": "", "points": ["Relief in sciatic pain (pain from the lower back down to the leg)", "Helpful in joint and muscle pain", "Herbal mixture, 100% natural", "Makes walking and moving around easier"]}
 ];
 const WA="919431873287";
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function card(p){
   const msg=encodeURIComponent("Hello, I would like information about "+p.name+".");
+  const page="product/"+esc(p.slug)+".html";
   return `<article class="card">
-    <button class="pic" type="button" data-zoom="${esc(p.img)}" data-alt="${esc(p.name)}" aria-label="View ${esc(p.name)} picture full size"><img src="${esc(p.img)}" alt="${esc(p.name)}: pack and benefits" loading="lazy"></button>
+    <a class="pic" href="${page}" aria-label="Open ${esc(p.name)} full details"><img src="${esc(p.img)}" alt="${esc(p.name)}: pack and benefits" loading="lazy"></a>
     <div class="body">
       <span class="tag">${esc(p.type)}${p.pack?" &middot; "+esc(p.pack):""}</span>
-      <h3>${esc(p.name)}</h3>
+      <h3><a href="${page}">${esc(p.name)}</a></h3>
       <ul class="points">${p.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
       ${p.price?`<p class="meta"><strong>Price:</strong> ${esc(p.price)}</p>`:""}
-      <a class="btn green" href="https://wa.me/${WA}?text=${msg}" target="_blank" rel="noopener">Ask about this product</a>
+      <div class="card-actions">
+        <a class="btn outline" href="${page}">View details</a>
+        <a class="btn green" href="https://wa.me/${WA}?text=${msg}" target="_blank" rel="noopener">Ask on WhatsApp</a>
+      </div>
     </div></article>`;
 }
 // home page: first few products (only if a #grid exists on the page)
@@ -65,18 +69,23 @@ if(enq)enq.addEventListener("submit",e=>{
 
 // ---- Home banner slider (images imgsld/ folder me hain) ----
 // d = laptop image, m = mobile image (same file bhi chalegi). Nayi image add karni ho to ek line copy karo.
+// href = slide pe click karne par kaunsa product page khule (optional).
+// fix:true = sirf us slide pe naya side-colour fix lagega (abhi Risho, Ortho aur Femo). Pehli banner slide pehle jaisi hi rahegi.
+// l / r = us slide ke left / right edge ka backup colour (canvas na chale tab use hota hai).
 const SLIDES=[
   {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"},
-  {d:"imgsld/risho.jpeg",m:"imgsld/rishomob.png",alt:"Risho-Liv Syrup"},
-  {d:"imgsld/ortho.jpeg",m:"imgsld/orthomob.png",alt:"Ortho Rish Syrup"},
-  {d:"imgsld/femo.jpeg",m:"imgsld/femomob.png",alt:"Femorish Syrup"}
+  {d:"imgsld/risho.jpeg",m:"imgsld/rishomob.png",alt:"Risho-Liv Syrup",href:"product/risho-liv-syrup.html",fix:true,l:"#000000",r:"#F6EDC8"},
+  {d:"imgsld/ortho.jpeg",m:"imgsld/orthomob.png",alt:"Ortho Rish Syrup",href:"product/ortho-rish-syrup.html",fix:true,l:"#000000",r:"#F4F1EA"},
+  {d:"imgsld/femo.jpeg",m:"imgsld/femomob.png",alt:"Femorish Syrup",href:"product/femorish-syrup.html",fix:true,l:"#000000",r:"#FAF7F0"}
 ];
 (function(){
   const box=document.querySelector(".bn");if(!box)return;
   const track=box.querySelector(".bn-track"),dotsEl=box.querySelector(".bn-dots");
-  track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}"><picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}" decoding="async"></picture></div>`).join("");
+  track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}">${s.href?`<a class="bn-link" href="${s.href}" aria-label="${s.alt}: view full details">`:""}<picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}" decoding="async"></picture>${s.href?"</a>":""}</div>`).join("");
 
-  // side space colours: picture ke left aur right edge ka colour copy karo
+  // ---- side space: picture ke left / right edge ka colour copy karo ----
+
+  // PEHLE WALA (original) tareeka: sirf pehli banner slide isi se chalti hai, koi badlav nahi.
   function edges(img,slide){
     try{
       const c=document.createElement("canvas");c.width=40;c.height=12;
@@ -86,9 +95,46 @@ const SLIDES=[
       slide.style.setProperty("--gl",col(0));slide.style.setProperty("--gr",col(39));slide.classList.add("ed");
     }catch(e){/* keeps the blurred fallback */}
   }
-  [...track.children].forEach(sl=>{
-    const im=sl.querySelector("img"),run=()=>edges(im,sl);
-    im.complete&&im.naturalWidth?run():im.addEventListener("load",run);
+
+  // NAYA tareeka: fix:true wali slides (Risho, Ortho, Femo) ke liye
+  const SAMPLE=12;
+  const solid=c=>c+" 0%,"+c+" 100%";
+  function setSides(slide,l,r){
+    slide.style.setProperty("--gl",l);
+    slide.style.setProperty("--gr",r);
+    slide.classList.add("ed");
+  }
+  function edgesFix(img,slide,s){
+    if(!img.naturalWidth)return;
+    slide.style.setProperty("--bg","url('"+img.currentSrc+"')");
+    try{
+      const w=img.naturalWidth,h=img.naturalHeight;
+      const c=document.createElement("canvas");c.width=2;c.height=SAMPLE;
+      const ctx=c.getContext("2d",{willReadFrequently:true});
+      ctx.drawImage(img,0,0,3,h,0,0,1,SAMPLE);
+      ctx.drawImage(img,w-3,0,3,h,1,0,1,SAMPLE);
+      const px=ctx.getImageData(0,0,2,SAMPLE).data;
+      const col=x=>Array.from({length:SAMPLE},(_,y)=>{
+        const k=(y*2+x)*4;
+        return "rgb("+px[k]+","+px[k+1]+","+px[k+2]+") "+Math.round(y/(SAMPLE-1)*100)+"%";
+      }).join(",");
+      setSides(slide,col(0),col(1));
+    }catch(e){
+      if(s.l&&s.r)setSides(slide,solid(s.l),solid(s.r));
+      else slide.classList.remove("ed");
+    }
+  }
+
+  [...track.children].forEach((sl,n)=>{
+    const im=sl.querySelector("img"),s=SLIDES[n];
+    if(s.fix){
+      const run=()=>edgesFix(im,sl,s);
+      im.addEventListener("load",run);
+      if(im.complete&&im.naturalWidth)run();
+    }else{
+      const run=()=>edges(im,sl);
+      im.complete&&im.naturalWidth?run():im.addEventListener("load",run);
+    }
   });
 
   if(SLIDES.length<2){box.classList.add("one");return}
