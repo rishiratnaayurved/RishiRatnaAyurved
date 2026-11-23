@@ -544,41 +544,10 @@ body{
     radial-gradient(ellipse at 12% 8%,rgba(95,197,124,.15),transparent 30rem),
     radial-gradient(ellipse at 92% 38%,rgba(55,166,99,.1),transparent 28rem);
 }
-body::before{
-  content:"RISHI RATNA AYURVED";
-  position:fixed;
-  z-index:9999;
-  inset:0;
-  display:grid;
-  place-items:center;
-  padding-top:126px;
-  pointer-events:none;
-  color:#c6ffda;
-  background:rgba(3,25,13,.94);
-  -webkit-backdrop-filter:blur(18px);
-  backdrop-filter:blur(18px);
-  font:500 13px/1 var(--sans);
-  letter-spacing:.24em;
-  text-align:center;
-  animation:loader-screen 1.2s ease forwards;
+@keyframes loader-spin{
+  from{transform:translate(-50%,-50%) rotate(0deg)}
+  to{transform:translate(-50%,-50%) rotate(360deg)}
 }
-body::after{
-  content:"";
-  position:fixed;
-  z-index:10000;
-  top:50%;
-  left:50%;
-  width:58px;
-  height:58px;
-  border:2px solid rgba(115,255,170,.2);
-  border-top-color:#52f291;
-  border-right-color:#1bbf69;
-  border-radius:50%;
-  pointer-events:none;
-  box-shadow:0 0 24px rgba(40,230,129,.28),inset 0 0 18px rgba(40,230,129,.12);
-  animation:loader-spin .8s linear infinite,loader-screen 1.2s ease forwards;
-}
-@keyframes loader-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 @keyframes loader-screen{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
 
 header{
@@ -781,7 +750,7 @@ footer .links a:hover{transform:translateY(-2px)}
 @media(prefers-reduced-motion:reduce){
   .hero-logo-wrap,.card img{transition:none}
   .hero::before,.hero::after{animation:none}
-  body::before,body::after{display:none}
+  .page-loader{display:none;animation:none}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -811,12 +780,60 @@ body{
     radial-gradient(ellipse at 92% 38%,rgba(19,91,53,.16),transparent 30rem),
     linear-gradient(145deg,#071F15,#082719 58%,#061D13);
 }
-body::before{color:#C1EBD0;background:rgba(3,24,14,.96)}
-body::after{
-  border-color:rgba(116,197,147,.2);
+.page-loader{
+  position:fixed;
+  z-index:9999;
+  inset:0;
+  display:grid;
+  place-items:center;
+  pointer-events:none;
+  color:#C1EBD0;
+  background:rgba(3,24,14,.96);
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);
+  animation:loader-screen 1.2s ease forwards;
+}
+.page-loader-logo{
+  position:relative;
+  z-index:1;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:contain;
+  background:#fff;
+  box-shadow:0 0 14px rgba(116,197,147,.24);
+}
+.page-loader-spinner{
+  position:absolute;
+  top:50%;
+  left:50%;
+  display:grid;
+  place-items:center;
+  width:62px;
+  height:62px;
+  transform:translate(-50%,-50%);
+}
+.page-loader-ring{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:62px;
+  height:62px;
+  border:2px solid rgba(116,197,147,.2);
   border-top-color:#6DCD91;
   border-right-color:#238D57;
+  border-radius:50%;
   box-shadow:0 0 24px rgba(40,153,87,.2),inset 0 0 18px rgba(40,153,87,.1);
+  animation:loader-spin .8s linear infinite;
+}
+.page-loader::after{
+  content:"RISHI RATNA AYURVED";
+  position:absolute;
+  top:calc(50% + 49px);
+  color:#C1EBD0;
+  font:500 12px/1 var(--sans);
+  letter-spacing:.22em;
+  white-space:nowrap;
 }
 
 header{
@@ -882,58 +899,7 @@ section:nth-of-type(even):not(.hero):not(.bn):not(.cta):not(.tight){
   box-shadow:0 15px 28px rgba(0,14,7,.28),0 0 20px rgba(65,164,101,.15),inset 0 1px rgba(235,255,240,.16);
 }
 .choice .syrup-logo{background:radial-gradient(circle at 30% 20%,rgba(126,220,154,.2),transparent 58%),linear-gradient(145deg,rgba(19,98,57,.82),rgba(6,43,26,.9))}
-.syrup-bottle{
-  position:relative;
-  display:block;
-  width:29px;
-  height:38px;
-  margin-top:12px;
-  border:2px solid #C8E7D1;
-  border-radius:6px 6px 8px 8px;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.16),transparent 34%,rgba(0,0,0,.1) 100%),
-    linear-gradient(to bottom,transparent 0 50%,#A85F2B 50% 100%);
-  box-shadow:0 5px 12px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.25);
-}
-.syrup-bottle::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-10px;
-  width:14px;
-  height:10px;
-  transform:translateX(-50%);
-  border:2px solid #C8E7D1;
-  border-bottom:0;
-  border-radius:4px 4px 0 0;
-  background:#17683F;
-}
-.syrup-bottle::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-17px;
-  width:14px;
-  height:7px;
-  transform:translateX(-50%);
-  border-radius:3px 3px 1px 1px;
-  background:linear-gradient(135deg,#83D39D,#27834D);
-  box-shadow:0 1px 4px rgba(0,0,0,.25);
-}
-.syrup-label{
-  position:absolute;
-  top:15px;
-  left:2px;
-  right:2px;
-  display:block;
-  padding:2px 0;
-  border-radius:2px;
-  background:linear-gradient(135deg,#E7D6A8,#F6ECCD);
-  color:#28553A;
-  font:700 5px/1 var(--sans);
-  letter-spacing:.15px;
-  text-align:center;
-}
+.syrup-mark{width:50px;height:58px;overflow:visible;filter:drop-shadow(0 5px 5px rgba(0,0,0,.24))}
 .choice .churan-logo{background:radial-gradient(circle at 30% 20%,rgba(181,224,132,.18),transparent 58%),linear-gradient(145deg,rgba(30,91,47,.82),rgba(6,43,26,.9))}
 .tag,.contact dt,.review-loc{color:#A8D9B6}
 
