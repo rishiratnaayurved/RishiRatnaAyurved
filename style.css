@@ -32,6 +32,8 @@
    24. Mobile: hide hero logo
    25. Banner Slider: laptop full cover (first slide only)
    26. Product Cards: links + Product Detail Pages
+   27. CTA band fix
+   28. Floating Call + WhatsApp buttons
    ============================================================ */
 
 /* ============ 1. FONTS & ROOT VARIABLES ============ */
@@ -500,4 +502,21 @@ section.bn{padding:0}
   .pd{grid-template-columns:1fr;gap:28px}
   .card .card-actions{flex-direction:column}
   .pd-actions .btn{flex:1 1 100%;text-align:center}
+}
+
+/* ============ 27. CTA BAND FIX ============ */
+/* .cta section ho ya panel, poora band dark hara rahe */
+section:has(.cta){background:var(--primary-dark) !important}
+.cta.panel{background:transparent;border:0}
+
+/* ============ 28. FLOATING CALL + WHATSAPP BUTTONS ============ */
+.float-cta{position:fixed;left:14px;bottom:18px;z-index:40;display:flex;flex-direction:column;gap:12px}
+.float-cta a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.28);transition:transform .2s}
+.float-cta a:hover{transform:scale(1.07)}
+.float-cta svg{width:28px;height:28px;fill:currentColor}
+.fc-call{background:var(--primary)}
+.fc-wa{background:#25D366}
+@media(max-width:600px){
+  .float-cta{left:10px;bottom:14px}
+  .float-cta a{width:50px;height:50px}
 }
