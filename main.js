@@ -1,3 +1,28 @@
+(function(){
+  const scriptUrl=document.currentScript.src;
+  const loader=document.createElement("div");
+  loader.className="page-loader";
+  loader.setAttribute("role","status");
+  loader.setAttribute("aria-label","Loading");
+
+  const spinner=document.createElement("span");
+  spinner.className="page-loader-spinner";
+
+  const logo=document.createElement("img");
+  logo.className="page-loader-logo";
+  logo.src=new URL("logo/rra.png",scriptUrl).href;
+  logo.alt="";
+
+  const ring=document.createElement("span");
+  ring.className="page-loader-ring";
+  ring.setAttribute("aria-hidden","true");
+
+  spinner.append(logo,ring);
+  loader.append(spinner);
+  loader.addEventListener("animationend",()=>loader.remove(),{once:true});
+  document.body.appendChild(loader);
+})();
+
 // ---- Products ----
 // cat is "syrup" or "churan". To add a product, copy one line below and change its values.
 // slug = product page ka naam (product/<slug>.html). Images are in the imgdet/ folder. Optional: add price:"Rs 000" to show a price on the card.
