@@ -458,9 +458,48 @@ section.bn{padding:0}
   .bn-slide{--bg:url("imgsld/mob.png")}
 }
 
-/* ============ 24. MOBILE: HIDE HERO LOGO ============ */
+/* ============ 24. MOBILE: SHOW HERO LOGO BELOW SLIDER ============ */
 @media(max-width:820px){
-  .hero-logo-wrap{display:none}
+  .hero-logo-wrap{display:block;grid-row:1;width:clamp(148px,38vw,204px);margin:0 auto 2px}
+  .hero-copy{grid-row:2}
+}
+@media(max-width:600px){
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr) clamp(108px,32vw,144px);
+    gap:8px 12px;
+    align-items:center;
+  }
+  .hero-copy{display:contents}
+  .hero-badge{grid-column:1/-1;grid-row:1;margin-bottom:8px}
+  .hero .hero-hi{
+    grid-column:1;
+    grid-row:2;
+    align-self:end;
+    font-size:clamp(1.65rem,6.2vw,2.15rem);
+    line-height:1.2;
+    margin-bottom:8px;
+  }
+  .hero.home h1{
+    grid-column:1;
+    grid-row:3;
+    font-size:clamp(1rem,4vw,1.2rem);
+    margin-bottom:0;
+  }
+  .hero-logo-wrap{
+    grid-column:2;
+    grid-row:2 / span 2;
+    width:clamp(108px,32vw,144px);
+    justify-self:end;
+    align-self:center;
+    margin:0;
+    animation:mobile-logo-float 3.8s ease-in-out infinite;
+  }
+  .hero-copy p{grid-column:1/-1;grid-row:4;max-width:none;margin-top:12px}
+  .hero-copy .btns{grid-column:1/-1;grid-row:5}
+}
+@keyframes mobile-logo-float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
 }
 
 /* ============ 25. BANNER SLIDER: LAPTOP FULL COVER (sirf pehli slide) ============ */
@@ -866,6 +905,10 @@ footer .copy{border-top-color:rgba(176,255,202,.2)}
 
 @media(max-width:820px){
   header nav{background:rgba(5,31,16,.98)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-logo-wrap{animation:none}
 }
 
 @media(hover:none),(pointer:coarse){
