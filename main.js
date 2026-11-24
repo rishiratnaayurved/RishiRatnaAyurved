@@ -23,101 +23,66 @@
   document.body.appendChild(loader);
 })();
 
-// ---- Products Data (Updated with PDF Details & Trending SEO) ----
-// Add or remove products here. The design will automatically adjust.
+// ---- Products ----
+// Zymorish aur X-Jeevani hata diye gaye hain. Zonyl wapas add kar diya gaya hai.
 const products=[
-  // --- SYRUPS ---
   {
-    "cat": "syrup", "slug": "risho-liv-syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Liver Care Syrup", "pack": "200 ml", 
-    "points": [
-      "लिवर की बीमारी के ईलाज के लिए उपयोगी।", 
-      "शरीर की प्रतिरक्षा प्रणाली को बचाव करने की क्षमता प्रदान करता है।", 
-      "खून में कोलेस्ट्रॉल के स्तर को नियंत्रित करता है।", 
-      "पीलिया के इलाज में बहुत उपयोगी है।"
-    ], 
+    "cat": "syrup", "slug": "risho-liv-syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", 
+    "points": ["Protects and supports the liver", "Helps improve digestion", "Boosts appetite and helps reduce weakness", "Herbal formula, 100% natural"], 
     "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Bhau Amla, Bhringraj, Kasni, Fumaria, Arjun, Harad, Black bhatkoya, Bajradanti, Deodar, Kutki, Vidang (each 10ml extract)."
+    "ingredients": "Bhau Amla, Bhringraj, Kasni, Fumaria, Arjun, Harad, Black bhatkoya, Bajradanti, Deodar, Kutki, Vidang."
   },
   {
-    "cat": "syrup", "slug": "zymorish-syrup", "name": "Zymorish Syrup", "img": "imgdet/zymorish.jpeg", "type": "Digestive Care", "pack": "200 ml", 
-    "points": [
-      "हाजमे के लिए उपयोगी सिरप।", 
-      "पेट, आंत और लिवर को उत्तेजित कर पाचक टॉनिक के रूप में मदद करता है।"
-    ], 
-    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Mulethi, Pudina, Adrak, Harad, Baheda, Sweetflag, Pippali, Arandi, Vidang, Kalimirch, Tulsi (each 10ml extract)."
+    "cat": "syrup", "slug": "risho-liv-ds-syrup", "name": "Risho Liv Ds Syrup", "img": "imgdet/rishods.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", 
+    "points": ["Protects the liver and helps maintain healthy liver function", "Improves digestion and boosts natural appetite", "Supports in fatty liver and weakness", "Sugar free, 100% natural Ayurvedic formulation"]
   },
   {
-    "cat": "syrup", "slug": "femorish-syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Female Health Tonic", "pack": "200 ml", 
-    "points": [
-      "महिलाओं के लिए स्वस्थ टॉनिक।", 
-      "कमर, पेट व नलों का दर्द, श्वेत प्रदर में उपयोगी।", 
-      "खून की कमी, थकावट, मानसिक व शारीरिक थकावट में लाभकारी।",
-      "रक्त साफ कर सौंदर्य बढ़ाता है।"
-    ], 
-    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Ashoka, Lodhra, Giloy, Shatavari, Arjun, Gular, Mulethi, Ashwagandha, Deodar, Adrak, Arandi, Vatkambal, Pippali."
+    "cat": "syrup", "slug": "abhayristha-syrup", "name": "Abhayristha Syrup", "img": "imgdet/abhay.jpeg", "type": "Ayurvedic syrup", "pack": "200 ml", 
+    "points": ["Helpful in constipation and piles", "Helps dry up piles (lumps) and reduce pain", "Supportive in stomach disorders and ulcers", "100% sugar free Ayurvedic, natural herbal formula"]
   },
   {
-    "cat": "syrup", "slug": "ortho-rish-syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Joint & Muscle Care", "pack": "200 ml", 
-    "points": [
-      "जोड़ों के दर्द, संधीवात, न्यूरो मसक्यूलर पेन में उपयोगी।", 
-      "कमर दर्द एवं हर तरह के वात रोग में लाभकारी।", 
-      "हाथ पैर में भयंकर सूजन में भी अत्यंत लाभ पहुँचाता है।"
-    ], 
+    "cat": "syrup", "slug": "stono-rish-syrup", "name": "Stono Rish Syrup", "img": "imgdet/stono.jpeg", "type": "Ayurvedic stone syrup", "pack": "200 ml", 
+    "points": ["Helpful in dissolving kidney stones", "Relieves pain and burning sensation", "Supports healthy, free urine flow", "Sugar free Ayurvedic, natural formula"]
+  },
+  {
+    "cat": "syrup", "slug": "ortho-rish-syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Ayurvedic joint pain syrup", "pack": "200 ml", 
+    "points": ["Relief from joint pain and swelling", "Helpful for arthritis and lower back pain", "Beneficial for muscle stiffness and tightness", "100% sugar free, natural Ayurvedic care"], 
     "dosage": "रोज 10ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
     "ingredients": "Ashwagandha, Salai, Haldi, Suranjan, Sounth, Nirgundi, Febrifuge, Khurasni Ajwain, Sounf, Shilajit, Rasna, Lahsuna."
   },
   {
-    "cat": "syrup", "slug": "blood-purrish-syrup", "name": "Blood Purish Syrup", "img": "imgdet/blood.jpeg", "type": "Skin & Blood Care", "pack": "200 ml", 
-    "points": [
-      "रक्त शोधक के रूप में कार्य करता है।", 
-      "चेहरे पर निखार लाने में मदद करता है।", 
-      "कील, मुहासों, खुजली व त्वचा रोग में उपयोगी।"
-    ], 
+    "cat": "syrup", "slug": "blood-purrish-syrup", "name": "Blood Purrish Syrup", "img": "imgdet/blood.jpeg", "type": "Ayurvedic blood purifier syrup", "pack": "200 ml", 
+    "points": ["Natural blood purifier that helps remove toxins", "Helps reduce pimples, acne and boils", "Beneficial in itching and skin disorders", "Sugar free, made with 100% natural herbs"], 
     "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
     "ingredients": "Majith, Khadir chhal, Daruhaldi, Chirayata, Kalmegh, Pitapapada, Gorakhmundi, Vasa, Raktachandan, Anantmool, Neem, Chopchini, Gulab."
   },
   {
-    "cat": "syrup", "slug": "hemorish-syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Multivitamin & Minerals", "pack": "200 ml", 
-    "points": [
-      "शरीर में खून की मात्रा को बढ़ाता है।", 
-      "शरीर में मल्टी विटामिन देता है।", 
-      "शरीर को ऊर्जावान रखने और थकान से लड़ने में मदद करता है।"
-    ], 
+    "cat": "syrup", "slug": "hemorish-syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Restorative and haematinic syrup", "pack": "", 
+    "points": ["Helpful in anemia (low blood)", "Helps remove weakness and fatigue", "Helps with loss of appetite", "Fortified with natural vitamins and minerals"], 
     "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Bhuchank (Ground Nut), Ashwagandha, Tulsi, Amla, Mulethi, Pippali, Elaichi, Lauh Bhasma."
+    "ingredients": "Bhuchank, Ashwagandha, Tulsi, Amla, Mulethi, Pippali, Elaichi, Lauh Bhasma."
   },
   {
-    "cat": "syrup", "slug": "aloevera-swaras", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Diabetes Care", "pack": "200 ml", 
-    "points": [
-      "डायबिटीज का स्तर सामान्य रखने में उपयोगी।", 
-      "शरीर में शर्करा की खपत होती है।", 
-      "बार-बार होने वाले संक्रमण को खत्म करता है।"
-    ], 
+    "cat": "syrup", "slug": "femorish-syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Haematinic feminine syrup", "pack": "200 ml", 
+    "points": ["Special health tonic for women", "With Ashoka: supports uterine health", "Helps in anemia and weakness", "Ayurvedic, herbal and 100% natural"], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Ashoka, Lodhra, Giloy, Shatavari, Arjun, Gular, Mulethi, Ashwagandha, Deodar, Adrak, Arandi, Vatkambal, Pippali."
+  },
+  {
+    "cat": "syrup", "slug": "cofrish-expectorant", "name": "Cofrish Expectorant", "img": "imgdet/cof.jpeg", "type": "Herbal expectorant syrup", "pack": "100 ml", 
+    "points": ["Relief from cough and cold", "Relieves sore throat and irritation", "Expectorant: helps expel phlegm", "Anti-allergic, decongestant"], 
+    "dosage": "रोज 10ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Adhatoda vasica, Adrak, Tulsi, Baheda, Sariva, Mulethi, Pippali, Kalimirch, Mentha, Voila Odorata, Haldi."
+  },
+  {
+    "cat": "syrup", "slug": "aloevera-swaras", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Aloe vera swaras (juice)", "pack": "200 ml", 
+    "points": ["Helps manage diabetes and blood sugar", "Relieves constipation and improves digestion", "Beneficial in blood disorders", "Energy drink for all age groups"], 
     "dosage": "रोज 20ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
     "ingredients": "Aloevera (55%), Dhania, Jamun, Kalmegh, Neem, Chhoti Dudhi, Giloy, Nirgundi, Gokhru, Makoya, Haldi."
   },
   {
-    "cat": "syrup", "slug": "cofrish-expectorant", "name": "Cofrish Syrup", "img": "imgdet/cof.jpeg", "type": "Cough & Allergy", "pack": "100 ml", 
-    "points": [
-      "पुरानी एवं सुखी खाँसी में चमत्कारी लाभ।", 
-      "बलगम को पतला कर बाहर निकालें।", 
-      "गले का खराश और कफ की जकड़न दूर करें।"
-    ], 
-    "dosage": "रोज 10ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Adhatoda vasica, Adrak, Tulsi, Baheda, Sariva, Mulethi, Pippali, Kalimirch, Mentha, Voila Odorata, Haldi."
-  },
-
-  // --- CHURAN ---
-  {
-    "cat": "churan", "slug": "x-jeevani-churna", "name": "X-Jeevani Churna", "img": "imgdet/xjeevani.jpeg", "type": "Energy & Vitality", "pack": "100 gm", 
-    "points": [
-      "स्वास्थ्य, शक्ति, जोश, ताकत में उपयोगी।", 
-      "शारीरिक कमजोरी दूर करने में मदद करता है।"
-    ], 
-    "dosage": "रोज 1–1 चम्मच सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
-    "ingredients": "Ashwagandha, Salai, Haldi, Suranjan, Sounth, Nirgundi, Febrifuge, Khurasni Ajwain, Sounf, Shilajit, Rasna, Lahsuna."
+    "cat": "syrup", "slug": "zonyl-herbal-mixture", "name": "Zonyl Herbal Mixture", "img": "imgdet/zonyl.jpeg", "type": "Ayurvedic herbal mixture", "pack": "", 
+    "points": ["Relief in sciatic pain", "Helpful in joint and muscle pain", "Herbal mixture, 100% natural", "Makes walking and moving around easier"]
   }
 ];
 
@@ -128,7 +93,6 @@ function card(p){
   const msg=encodeURIComponent("Hello, I would like information about "+p.name+".");
   const page="product/"+esc(p.slug)+".html";
   
-  // Custom CSS for dosage and details to match your dark theme
   const dosageHtml = p.dosage ? `<div style="font-size:0.9rem; color:#A8D9B6; margin:10px 0; background:rgba(0,0,0,0.2); padding:10px; border-left:3px solid #4EBB7B; border-radius:4px;"><b>खुराक:</b> ${esc(p.dosage)}</div>` : "";
   
   const ingredientsHtml = p.ingredients ? `
