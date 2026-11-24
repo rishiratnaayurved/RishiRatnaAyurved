@@ -23,33 +23,128 @@
   document.body.appendChild(loader);
 })();
 
-// ---- Products ----
-// cat is "syrup" or "churan". To add a product, copy one line below and change its values.
-// slug = product page ka naam (product/<slug>.html). Images are in the imgdet/ folder. Optional: add price:"Rs 000" to show a price on the card.
+// ---- Products Data (Updated with PDF Details & Trending SEO) ----
+// Add or remove products here. The design will automatically adjust.
 const products=[
-  {"cat": "syrup", "slug": "risho-liv-syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects and supports the liver (liver protective)", "Helps improve digestion", "Boosts appetite and helps reduce weakness", "Herbal formula, 100% natural"]},
-  {"cat": "syrup", "slug": "risho-liv-ds-syrup", "name": "Risho Liv Ds Syrup", "img": "imgdet/rishods.jpeg", "type": "Ayurvedic liver syrup", "pack": "200 ml", "points": ["Protects the liver and helps maintain healthy liver function", "Improves digestion and boosts natural appetite", "Supports in fatty liver and weakness, aids overall strength", "Sugar free, 100% natural Ayurvedic formulation"]},
-  {"cat": "syrup", "slug": "abhayristha-syrup", "name": "Abhayristha Syrup", "img": "imgdet/abhay.jpeg", "type": "Ayurvedic syrup", "pack": "200 ml", "points": ["Helpful in constipation and piles", "Helps dry up piles (lumps) and reduce pain", "Supportive in stomach disorders and ulcers", "100% sugar free Ayurvedic, natural herbal formula"]},
-  {"cat": "syrup", "slug": "stono-rish-syrup", "name": "Stono Rish Syrup", "img": "imgdet/stono.jpeg", "type": "Ayurvedic stone syrup", "pack": "200 ml", "points": ["Helpful in dissolving kidney stones", "Relieves pain and burning sensation", "Supports healthy, free urine flow", "Sugar free Ayurvedic, natural formula"]},
-  {"cat": "syrup", "slug": "ortho-rish-syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Ayurvedic joint pain syrup", "pack": "200 ml", "points": ["Relief from joint pain and swelling", "Helpful for arthritis and lower back pain", "Beneficial for muscle stiffness and tightness", "100% sugar free, natural Ayurvedic care"]},
-  {"cat": "syrup", "slug": "blood-purrish-syrup", "name": "Blood Purrish Syrup", "img": "imgdet/blood.jpeg", "type": "Ayurvedic blood purifier syrup", "pack": "200 ml", "points": ["Natural blood purifier that helps remove toxins and impurities from the blood", "Helps reduce pimples, acne and boils, and promotes clear, healthy skin", "Beneficial in itching, skin disorders and allergies, and soothes skin irritation", "Sugar free, made with 100% natural Ayurvedic herbs"]},
-  {"cat": "syrup", "slug": "hemorish-syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Restorative and haematinic syrup", "pack": "", "points": ["Helpful in anemia (low blood): restorative and haematinic action", "Helps remove weakness and fatigue", "Helps with loss of appetite", "Fortified with natural vitamins and minerals, made with natural fruits and herbs"]},
-  {"cat": "syrup", "slug": "femorish-syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Haematinic feminine syrup with Ashoka", "pack": "200 ml", "points": ["Special health tonic for women", "With Ashoka: supports uterine health", "Helps in anemia and weakness", "Ayurvedic, herbal and 100% natural"]},
-  {"cat": "syrup", "slug": "cofrish-expectorant", "name": "Cofrish Expectorant", "img": "imgdet/cof.jpeg", "type": "Herbal expectorant syrup", "pack": "100 ml", "points": ["Relief from cough and cold", "Relieves sore throat and irritation", "Expectorant: helps expel phlegm", "Eases breathing. Anti-allergic, decongestant, herbal formula"]},
-  {"cat": "syrup", "slug": "aloevera-swaras", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Aloe vera swaras (juice)", "pack": "200 ml", "points": ["Helps manage diabetes and blood sugar levels", "Relieves constipation and improves digestion", "Beneficial in blood disorders and high blood pressure", "Energy drink for all age groups: no added water, sugar free, 100% natural"]},
-  {"cat": "syrup", "slug": "zonyl-herbal-mixture", "name": "Zonyl Herbal Mixture", "img": "imgdet/zonyl.jpeg", "type": "Ayurvedic herbal mixture", "pack": "", "points": ["Relief in sciatic pain (pain from the lower back down to the leg)", "Helpful in joint and muscle pain", "Herbal mixture, 100% natural", "Makes walking and moving around easier"]}
+  // --- SYRUPS ---
+  {
+    "cat": "syrup", "slug": "risho-liv-syrup", "name": "Risho-Liv Syrup", "img": "imgdet/risho.jpeg", "type": "Liver Care Syrup", "pack": "200 ml", 
+    "points": [
+      "लिवर की बीमारी के ईलाज के लिए उपयोगी।", 
+      "शरीर की प्रतिरक्षा प्रणाली को बचाव करने की क्षमता प्रदान करता है।", 
+      "खून में कोलेस्ट्रॉल के स्तर को नियंत्रित करता है।", 
+      "पीलिया के इलाज में बहुत उपयोगी है।"
+    ], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Bhau Amla, Bhringraj, Kasni, Fumaria, Arjun, Harad, Black bhatkoya, Bajradanti, Deodar, Kutki, Vidang (each 10ml extract)."
+  },
+  {
+    "cat": "syrup", "slug": "zymorish-syrup", "name": "Zymorish Syrup", "img": "imgdet/zymorish.jpeg", "type": "Digestive Care", "pack": "200 ml", 
+    "points": [
+      "हाजमे के लिए उपयोगी सिरप।", 
+      "पेट, आंत और लिवर को उत्तेजित कर पाचक टॉनिक के रूप में मदद करता है।"
+    ], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Mulethi, Pudina, Adrak, Harad, Baheda, Sweetflag, Pippali, Arandi, Vidang, Kalimirch, Tulsi (each 10ml extract)."
+  },
+  {
+    "cat": "syrup", "slug": "femorish-syrup", "name": "Femorish Syrup", "img": "imgdet/femo.jpeg", "type": "Female Health Tonic", "pack": "200 ml", 
+    "points": [
+      "महिलाओं के लिए स्वस्थ टॉनिक।", 
+      "कमर, पेट व नलों का दर्द, श्वेत प्रदर में उपयोगी।", 
+      "खून की कमी, थकावट, मानसिक व शारीरिक थकावट में लाभकारी।",
+      "रक्त साफ कर सौंदर्य बढ़ाता है।"
+    ], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Ashoka, Lodhra, Giloy, Shatavari, Arjun, Gular, Mulethi, Ashwagandha, Deodar, Adrak, Arandi, Vatkambal, Pippali."
+  },
+  {
+    "cat": "syrup", "slug": "ortho-rish-syrup", "name": "Ortho Rish Syrup", "img": "imgdet/ortho.jpeg", "type": "Joint & Muscle Care", "pack": "200 ml", 
+    "points": [
+      "जोड़ों के दर्द, संधीवात, न्यूरो मसक्यूलर पेन में उपयोगी।", 
+      "कमर दर्द एवं हर तरह के वात रोग में लाभकारी।", 
+      "हाथ पैर में भयंकर सूजन में भी अत्यंत लाभ पहुँचाता है।"
+    ], 
+    "dosage": "रोज 10ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Ashwagandha, Salai, Haldi, Suranjan, Sounth, Nirgundi, Febrifuge, Khurasni Ajwain, Sounf, Shilajit, Rasna, Lahsuna."
+  },
+  {
+    "cat": "syrup", "slug": "blood-purrish-syrup", "name": "Blood Purish Syrup", "img": "imgdet/blood.jpeg", "type": "Skin & Blood Care", "pack": "200 ml", 
+    "points": [
+      "रक्त शोधक के रूप में कार्य करता है।", 
+      "चेहरे पर निखार लाने में मदद करता है।", 
+      "कील, मुहासों, खुजली व त्वचा रोग में उपयोगी।"
+    ], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Majith, Khadir chhal, Daruhaldi, Chirayata, Kalmegh, Pitapapada, Gorakhmundi, Vasa, Raktachandan, Anantmool, Neem, Chopchini, Gulab."
+  },
+  {
+    "cat": "syrup", "slug": "hemorish-syrup", "name": "Hemorish Syrup", "img": "imgdet/hemo.jpeg", "type": "Multivitamin & Minerals", "pack": "200 ml", 
+    "points": [
+      "शरीर में खून की मात्रा को बढ़ाता है।", 
+      "शरीर में मल्टी विटामिन देता है।", 
+      "शरीर को ऊर्जावान रखने और थकान से लड़ने में मदद करता है।"
+    ], 
+    "dosage": "रोज 15ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Bhuchank (Ground Nut), Ashwagandha, Tulsi, Amla, Mulethi, Pippali, Elaichi, Lauh Bhasma."
+  },
+  {
+    "cat": "syrup", "slug": "aloevera-swaras", "name": "Aloevera Swaras", "img": "imgdet/aloe.jpeg", "type": "Diabetes Care", "pack": "200 ml", 
+    "points": [
+      "डायबिटीज का स्तर सामान्य रखने में उपयोगी।", 
+      "शरीर में शर्करा की खपत होती है।", 
+      "बार-बार होने वाले संक्रमण को खत्म करता है।"
+    ], 
+    "dosage": "रोज 20ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Aloevera (55%), Dhania, Jamun, Kalmegh, Neem, Chhoti Dudhi, Giloy, Nirgundi, Gokhru, Makoya, Haldi."
+  },
+  {
+    "cat": "syrup", "slug": "cofrish-expectorant", "name": "Cofrish Syrup", "img": "imgdet/cof.jpeg", "type": "Cough & Allergy", "pack": "100 ml", 
+    "points": [
+      "पुरानी एवं सुखी खाँसी में चमत्कारी लाभ।", 
+      "बलगम को पतला कर बाहर निकालें।", 
+      "गले का खराश और कफ की जकड़न दूर करें।"
+    ], 
+    "dosage": "रोज 10ml सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Adhatoda vasica, Adrak, Tulsi, Baheda, Sariva, Mulethi, Pippali, Kalimirch, Mentha, Voila Odorata, Haldi."
+  },
+
+  // --- CHURAN ---
+  {
+    "cat": "churan", "slug": "x-jeevani-churna", "name": "X-Jeevani Churna", "img": "imgdet/xjeevani.jpeg", "type": "Energy & Vitality", "pack": "100 gm", 
+    "points": [
+      "स्वास्थ्य, शक्ति, जोश, ताकत में उपयोगी।", 
+      "शारीरिक कमजोरी दूर करने में मदद करता है।"
+    ], 
+    "dosage": "रोज 1–1 चम्मच सुबह-शाम या चिकित्सक के परामर्श अनुसार।",
+    "ingredients": "Ashwagandha, Salai, Haldi, Suranjan, Sounth, Nirgundi, Febrifuge, Khurasni Ajwain, Sounf, Shilajit, Rasna, Lahsuna."
+  }
 ];
+
 const WA="919431873287";
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
 function card(p){
   const msg=encodeURIComponent("Hello, I would like information about "+p.name+".");
   const page="product/"+esc(p.slug)+".html";
+  
+  // Custom CSS for dosage and details to match your dark theme
+  const dosageHtml = p.dosage ? `<div style="font-size:0.9rem; color:#A8D9B6; margin:10px 0; background:rgba(0,0,0,0.2); padding:10px; border-left:3px solid #4EBB7B; border-radius:4px;"><b>खुराक:</b> ${esc(p.dosage)}</div>` : "";
+  
+  const ingredientsHtml = p.ingredients ? `
+    <details style="font-size:0.85rem; margin-bottom:15px; color:#B7CDBD;">
+      <summary style="cursor:pointer; color:#4EBB7B; font-weight:600;">View Ingredients (Composition)</summary>
+      <p style="margin-top:8px; background:rgba(0,0,0,0.1); padding:8px; border-radius:4px;">${esc(p.ingredients)}</p>
+    </details>` : "";
+
   return `<article class="card">
     <a class="pic" href="${page}" aria-label="Open ${esc(p.name)} full details"><img src="${esc(p.img)}" alt="${esc(p.name)}: pack and benefits" loading="lazy"></a>
     <div class="body">
       <span class="tag">${esc(p.type)}${p.pack?" &middot; "+esc(p.pack):""}</span>
       <h3><a href="${page}">${esc(p.name)}</a></h3>
       <ul class="points">${p.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+      ${dosageHtml}
+      ${ingredientsHtml}
       ${p.price?`<p class="meta"><strong>Price:</strong> ${esc(p.price)}</p>`:""}
       <div class="card-actions">
         <a class="btn outline" href="${page}">View details</a>
@@ -57,17 +152,20 @@ function card(p){
       </div>
     </div></article>`;
 }
-// home page: first few products (only if a #grid exists on the page)
+
+// home page: first few products
 const g=document.getElementById("grid");
 if(g)g.innerHTML=(g.dataset.limit?products.slice(0,+g.dataset.limit):products).map(card).join("");
+
 // products page: one section per category
 ["syrup","churan"].forEach(c=>{
   const el=document.getElementById("grid-"+c);if(!el)return;
   const list=products.filter(p=>p.cat===c);
   el.innerHTML=list.length?list.map(card).join(""):
-    `<div class="empty"><p>Our churan range will be added here soon. Message us on WhatsApp to know what is available.</p><a class="btn green" href="https://wa.me/${WA}?text=${encodeURIComponent("Hello, I would like to know about your churan products.")}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>`;
+    `<div class="empty"><p>Our ${c} range will be added here soon. Message us on WhatsApp to know what is available.</p><a class="btn green" href="https://wa.me/${WA}?text=${encodeURIComponent("Hello, I would like to know about your "+c+" products.")}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>`;
   const n=document.getElementById("count-"+c);if(n)n.textContent=list.length;
 });
+
 // tap a product picture to see it full size
 (function(){
   let box=null;
@@ -92,11 +190,7 @@ if(enq)enq.addEventListener("submit",e=>{
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t),"_blank","noopener");
 });
 
-// ---- Home banner slider (images imgsld/ folder me hain) ----
-// d = laptop image, m = mobile image (same file bhi chalegi). Nayi image add karni ho to ek line copy karo.
-// href = slide pe click karne par kaunsa product page khule (optional).
-// fix:true = sirf us slide pe naya side-colour fix lagega (abhi Risho, Ortho aur Femo). Pehli banner slide pehle jaisi hi rahegi.
-// l / r = us slide ke left / right edge ka backup colour (canvas na chale tab use hota hai).
+// ---- Home banner slider ----
 const SLIDES=[
   {d:"imgsld/lptp.png",m:"imgsld/mob.png",alt:"Rishi Ratna Ayurved banner"},
   {d:"imgsld/risho.jpeg",m:"imgsld/rishomob.png",alt:"Risho-Liv Syrup",href:"product/risho-liv-syrup.html",fix:true,l:"#000000",r:"#F6EDC8"},
@@ -108,9 +202,6 @@ const SLIDES=[
   const track=box.querySelector(".bn-track"),dotsEl=box.querySelector(".bn-dots");
   track.innerHTML=SLIDES.map((s,i)=>`<div class="bn-slide" style="--bg:url('${s.d}')" role="group" aria-roledescription="slide" aria-label="${i+1} of ${SLIDES.length}">${s.href?`<a class="bn-link" href="${s.href}" aria-label="${s.alt}: view full details">`:""}<picture><source media="(max-width:700px)" srcset="${s.m}"><img src="${s.d}" alt="${s.alt}" decoding="async"></picture>${s.href?"</a>":""}</div>`).join("");
 
-  // ---- side space: picture ke left / right edge ka colour copy karo ----
-
-  // PEHLE WALA (original) tareeka: sirf pehli banner slide isi se chalti hai, koi badlav nahi.
   function edges(img,slide){
     try{
       const c=document.createElement("canvas");c.width=40;c.height=12;
@@ -118,10 +209,9 @@ const SLIDES=[
       const px=ctx.getImageData(0,0,40,12).data;
       const col=x=>Array.from({length:12},(_,y)=>{const k=(y*40+x)*4;return "rgb("+px[k]+","+px[k+1]+","+px[k+2]+") "+Math.round(y/11*100)+"%"}).join(",");
       slide.style.setProperty("--gl",col(0));slide.style.setProperty("--gr",col(39));slide.classList.add("ed");
-    }catch(e){/* keeps the blurred fallback */}
+    }catch(e){}
   }
 
-  // NAYA tareeka: fix:true wali slides (Risho, Ortho, Femo) ke liye
   const SAMPLE=12;
   const solid=c=>c+" 0%,"+c+" 100%";
   function setSides(slide,l,r){
@@ -194,6 +284,6 @@ const SLIDES=[
   matchMedia("(min-width:821px)").addEventListener("change",e=>{if(e.matches)set(false)});
 })();
 
-// automatic copyright year (pages that have <span id="yr">)
+// automatic copyright year
 const yr=document.getElementById("yr");
 if(yr)yr.textContent=new Date().getFullYear();
