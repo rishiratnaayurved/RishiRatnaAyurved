@@ -796,12 +796,13 @@ body{
 .page-loader-logo{
   position:relative;
   z-index:1;
-  width:42px;
-  height:42px;
+  width:72px;
+  height:72px;
   border-radius:50%;
   object-fit:contain;
   background:#fff;
-  box-shadow:0 0 14px rgba(116,197,147,.24);
+  box-shadow:0 0 24px rgba(116,197,147,.38),0 0 42px rgba(217,180,91,.16);
+  padding:3px;
 }
 .page-loader-spinner{
   position:absolute;
@@ -809,17 +810,17 @@ body{
   left:50%;
   display:grid;
   place-items:center;
-  width:62px;
-  height:62px;
+  width:104px;
+  height:104px;
   transform:translate(-50%,-50%);
 }
 .page-loader-ring{
   position:absolute;
   top:50%;
   left:50%;
-  width:62px;
-  height:62px;
-  border:2px solid rgba(116,197,147,.2);
+  width:104px;
+  height:104px;
+  border:2px solid rgba(116,197,147,.24);
   border-top-color:#6DCD91;
   border-right-color:#238D57;
   border-radius:50%;
@@ -829,11 +830,18 @@ body{
 .page-loader::after{
   content:"RISHI RATNA AYURVED";
   position:absolute;
-  top:calc(50% + 49px);
-  color:#C1EBD0;
-  font:500 12px/1 var(--sans);
-  letter-spacing:.22em;
+  top:calc(50% + 82px);
+  background:linear-gradient(180deg,#FFF0B8 0%,#E6C56E 42%,#B88732 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font:700 17px/1.2 var(--serif);
+  letter-spacing:.13em;
   white-space:nowrap;
+  text-align:center;
+  text-shadow:0 2px 0 rgba(91,61,15,.24),0 5px 12px rgba(0,0,0,.34);
+  filter:drop-shadow(0 0 8px rgba(217,180,91,.2));
+  transform:perspective(500px) rotateX(8deg);
 }
 
 header{
@@ -1275,4 +1283,14 @@ footer a[href*="instagram.com/jsr.adarsh"]:hover{
   .clinic-note:hover,.empty:hover,.pz-card:hover,.card:active,.clinic-card:active,
   .review-card:active,.panel:active,.choice:active,.clinic-note:active,
   .empty:active,.pz-card:active{transform:none !important}
+}
+
+
+/* Loader brand title: balanced sizing on small screens */
+@media (max-width:480px){
+  .page-loader::after{
+    top:calc(50% + 80px);
+    font-size:14px;
+    letter-spacing:.10em;
+  }
 }
