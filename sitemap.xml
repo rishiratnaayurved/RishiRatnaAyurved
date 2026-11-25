@@ -1,27 +1,117 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.rishiratnaayurved.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/about.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/ayurveda.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/churan.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/clinics.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/products.html</loc>
-  </url>
-  <url>
-    <loc>https://www.rishiratnaayurved.com/syrup.html</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://www.rishiratnaayurved.com/</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>1.0000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/index.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/about.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/products.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/clinics.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/ayurveda.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/contact.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/churan.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/clinic-monday.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/clinic-thursday.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/clinic-saturday.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/risho-liv-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.4096</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/ortho-rish-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.4096</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/femorish-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.4096</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/risho-liv-ds-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/abhayristha-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/stono-rish-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/blood-purrish-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/hemorish-syrup.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/cofrish-expectorant.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/aloevera-swaras.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
+<url>
+<loc>https://www.rishiratnaayurved.com/product/zonyl-herbal-mixture.html</loc>
+<lastmod>2026-11-25T08:35:35+00:00</lastmod>
+<priority>0.3277</priority>
+</url>
 </urlset>
